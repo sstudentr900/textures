@@ -1,0 +1,529 @@
+body {
+    overflow-x: hidden;
+}
+
+.load {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load.active {
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.load .spinner-1 {
+    width: 64px;
+    height: 64px;
+    stroke: #409046;
+    fill: none;
+    stroke-width: 8%;
+    stroke-dasharray: 0 409;
+    stroke-linecap: round;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+    animation: spinner-fluid 4s linear infinite, spinner 2s linear infinite;
+}
+
+@keyframes spinner-fluid {
+    0% {
+        stroke-dasharray: 0 409;
+    }
+    55% {
+        stroke-dasharray: 409 0;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -409;
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+/*footer*/
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #222;
+}
+
+.footer p,
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #0E5BD4;
+}
+
+.footer-socials {
+    float: right;
+}
+
+
+/*picture*/
+
+section.picture-item {
+    padding: 75px 0 0;
+    background: url('https://i.imgur.com/cIpbQ7u.jpg');
+}
+
+section.picture-item#contact {
+    padding: 75px 0;
+    position: relative;
+}
+
+.picture-bg {
+    position: relative;
+    height: 550px;
+    background: linear-gradient(to bottom, rgba(21, 177, 226, 1) 0%, rgba(157, 214, 230, 1) 25%, rgba(157, 214, 230, 0) 70%), url('https://i.imgur.com/cIpbQ7u.jpg');
+}
+
+.picture-bg .headline {
+    position: absolute;
+    left: calc(50% - 300px);
+    top: calc(50% - 260px);
+    width: 600px;
+}
+
+.picture-bg .headline p {
+    margin: 0 30px;
+    font-size: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    margin-top: -15px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    display: none;
+}
+
+.picture-bg .cloud01,
+.picture-bg .cloud02,
+.picture-bg .sea01,
+.picture-bg .sea02,
+.picture-bg .sea03 {
+    position: absolute;
+    width: 100%;
+}
+
+.picture-bg .cloud01 {
+    top: 115px;
+    opacity: 0.6;
+    background: url('https://i.imgur.com/iUVMqne.png') repeat-x;
+    height: 160px;
+    animation: cloud 120s linear infinite;
+}
+
+.picture-bg .cloud02 {
+    top: -25px;
+    opacity: 0.2;
+    background: url('https://i.imgur.com/3PNgcJW.png') repeat-x;
+    height: 180px;
+    animation: cloud 280s linear infinite;
+}
+
+.picture-bg .sea01 {
+    top: 230px;
+    background: url('https://i.imgur.com/DXbPFbF.png') no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+.picture-bg .sea02,
+.picture-bg .sea03 {
+    top: 260px;
+    height: 260px;
+}
+
+.picture-bg .sea02 {
+    background: url('https://i.imgur.com/eqigYdP.png') repeat-x;
+    animation: cloud 200s linear infinite, sea 5s ease-out infinite;
+}
+
+.picture-bg .sea03 {
+    top: 285px;
+    opacity: 0;
+    background: url('https://i.imgur.com/E3cmPpD.png') repeat-x;
+    animation: cloud 200s linear infinite, sea-opacity 5s linear infinite;
+}
+
+@keyframes cloud {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1295px 0;
+    }
+}
+
+@keyframes sea {
+    0% {
+        top: 260px;
+    }
+    50% {
+        top: 290px;
+    }
+    60% {
+        top: 290px;
+    }
+    100% {
+        top: 260px;
+    }
+}
+
+@keyframes sea-opacity {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.picture-bg .tree01 {
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    transform-origin: left bottom;
+    animation: tree 4s linear infinite;
+}
+
+.picture-bg .tree02 {
+    position: absolute;
+    top: 140px;
+    right: -65px;
+    transform-origin: right bottom;
+    animation: tree 6s linear infinite;
+}
+
+@keyframes tree {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(-1deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+.picture-bg .people {
+    position: absolute;
+    top: 340px;
+    left: 120px;
+    width: 228px;
+    height: 300px;
+    background: url('https://i.imgur.com/XvtAtGq.png') 0 0 no-repeat;
+    animation: walker 1s steps(2) infinite;
+}
+
+@keyframes walker {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -460px 0;
+    }
+}
+
+.picture-bg .link {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.picture-item .box-out {
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transform: rotate(3deg);
+    display: block;
+    color: #888;
+    transition: .4s;
+}
+
+.picture-item .box-out:hover {
+    transform: rotate(0deg);
+}
+
+.picture-item .col-md-3:nth-child(odd) .box-out {
+    transform: rotate(-3deg);
+}
+
+.picture-item .col-md-3:nth-child(odd) .box-out:hover {
+    transform: rotate(0deg);
+}
+
+.picture-item .img-out {
+    border: 1px solid #eee;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 15px 15px;
+    transition: .4s;
+}
+
+.picture-item .img-out:hover {
+    transform: translateY(-10px);
+}
+
+.picture-item .img-out-last {
+    margin: 0 15px 15px;
+    text-align: center;
+}
+
+.picture-item .img-out-last img {
+    width: 90%;
+    margin: auto;
+}
+
+.picture-line {
+    width: 100%;
+    height: 0;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.4);
+    border-top: 2px dashed rgba(0, 0, 0, 0.08);
+    margin-top: 80px;
+}
+
+section.picture-item h2.section-heading {
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px #fff;
+    color: rgba(35, 20, 9, 0.5);
+    font-weight: bold;
+}
+
+section.picture-item h3 {
+    font-size: 28px;
+}
+
+section.picture-item h4 {
+    font-weight: normal;
+    font-style: italic;
+    margin: 22px 0 15px;
+}
+
+.picture-ball {
+    position: absolute;
+    right: 50px;
+    bottom: 25px;
+}
+
+
+/*Ã¥Å½Å¸Ã¥â€°ÂµÃ¤Â¸Â»Ã©Â¡Å’Ã§Â³Â»Ã¥Ë†â€”*/
+
+.letterShareBtn {
+    color: #fffaeb;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+.letterShareBtn:hover .letterShareBtnLabel div span.letterShareLabelReg {
+    top: -35px;
+    color: #fffaeb;
+}
+
+.letterShareBtn:hover .letterShareBtnLabel div span.letterShareLabelHover {
+    top: 0px;
+    color: #fffaeb;
+}
+
+.letterShareBtn .letterShareBtnLabel {
+    position: absolute;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 48px;
+}
+
+.letterShareBtn .letterShareBtnLabel div {
+    height: 0;
+}
+
+.letterShareBtn .letterShareBtnLabel div span {
+    position: relative;
+    -webkit-transition: top 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: top 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: top 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: top 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.letterShareBtn .letterShareBtnLabel div span.letterShareLabelReg {
+    top: 0;
+    left: 0px;
+}
+
+.letterShareBtn .letterShareBtnLabel div span.letterShareLabelHover {
+    top: 35px;
+    left: 0px;
+}
+
+.letterShareBtn .letterShareBtnLabel:before,
+.letterShareBtn .letterShareBtnLabel:after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #fffaeb;
+}
+
+.letterShareBtn .letterShareBtnLabel:before {
+    left: 22px;
+}
+
+.letterShareBtn .letterShareBtnLabel:after {
+    right: 22px;
+}
+
+.letterShareBtn svg {
+    position: absolute;
+    left: 0px;
+}
+
+.letterShareShelf {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 135px;
+    height: 33px;
+    overflow: hidden;
+}
+
+.letterShareShelf.open .letterShareShelfInner {
+    left: -0.49em
+}
+
+.letterShareShelf .letterShareShelfInner {
+    position: absolute;
+    width: 350px;
+    height: 33px;
+    left: -225px;
+    -webkit-transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1)
+}
+
+.letterShareShelf .letterShareShelfInner .letterShareShelfIcons {
+    position: absolute;
+    right: 20px;
+    top: 0.53em;
+    width: 100%;
+    height: 100%;
+    font-size: .07em;
+    text-align: right
+}
+
+.letterShareShelf .letterShareShelfInner .letterShareShelfIcons a {
+    padding: 3px;
+    color: inherit;
+    text-decoration: none
+}
+
+.letterShareShelf .letterShareShelfInner svg {
+    position: absolute;
+    top: 0px;
+    left: 0px
+}
+
+.hidded-item {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .picture-ball {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .picture-bg .tree02,
+    .picture-bg .tree01 {
+        display: none;
+    }
+    .picture-bg .people {
+        left: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    .picture-bg .people {
+        display: none;
+    }
+    .picture-item .box-out {
+        margin: 0 20px 60px;
+    }
+    .picture-item .col-md-3:nth-child(4) {
+        clear: both;
+    }
+    .picture-item .col-md-3:nth-child(5) .box-out {
+        margin-bottom: 0;
+    }
+    .show-item {
+        display: none;
+    }
+    .hidded-item {
+        display: block;
+    }
+    .picture-top .col-sm-4 {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 580px) {
+    .picture-bg .headline {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .picture-bg .headline p {
+        display: block;
+    }
+    section.picture-item {
+        padding: 35px 0 0;
+    }
+    section.picture-item h4 {
+        margin: 15px 0 10px;
+    }
+    .picture-item .box-out {
+        margin: 0 20px 40px;
+    }
+}
