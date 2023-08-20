@@ -81,7 +81,8 @@ body {
 
 section.picture-item {
     padding: 75px 0 0;
-    background: url('https://i.imgur.com/cIpbQ7u.jpg');
+    /* background: url('https://i.imgur.com/cIpbQ7u.jpg'); */
+    background: url('../img/bg1.jpg');
 }
 
 section.picture-item#contact {
@@ -92,7 +93,7 @@ section.picture-item#contact {
 .picture-bg {
     position: relative;
     height: 550px;
-    background: linear-gradient(to bottom, rgba(21, 177, 226, 1) 0%, rgba(157, 214, 230, 1) 25%, rgba(157, 214, 230, 0) 70%), url('https://i.imgur.com/cIpbQ7u.jpg');
+    background: linear-gradient(to bottom, rgba(21, 177, 226, 1) 0%, rgba(157, 214, 230, 1) 25%, rgba(157, 214, 230, 0) 70%), url('../img/bg1.jpg');
 }
 
 .picture-bg .headline {
@@ -127,7 +128,8 @@ section.picture-item#contact {
 .picture-bg .cloud01 {
     top: 115px;
     opacity: 0.6;
-    background: url('https://i.imgur.com/iUVMqne.png') repeat-x;
+    /* background: url('https://i.imgur.com/iUVMqne.png') repeat-x; */
+    background: url('../img/01.svg') repeat-x;
     height: 160px;
     animation: cloud 120s linear infinite;
 }
@@ -135,14 +137,16 @@ section.picture-item#contact {
 .picture-bg .cloud02 {
     top: -25px;
     opacity: 0.2;
-    background: url('https://i.imgur.com/3PNgcJW.png') repeat-x;
+    /* background: url('https://i.imgur.com/3PNgcJW.png') repeat-x; */
+    background: url('../img/02.svg') repeat-x;
     height: 180px;
     animation: cloud 280s linear infinite;
 }
 
 .picture-bg .sea01 {
     top: 230px;
-    background: url('https://i.imgur.com/DXbPFbF.png') no-repeat;
+    /* background: url('https://i.imgur.com/DXbPFbF.png') no-repeat; */
+    background: url('../img/03.svg') no-repeat;
     background-size: cover;
     height: 200px;
 }
@@ -154,14 +158,16 @@ section.picture-item#contact {
 }
 
 .picture-bg .sea02 {
-    background: url('https://i.imgur.com/eqigYdP.png') repeat-x;
+    /* background: url('https://i.imgur.com/eqigYdP.png') repeat-x; */
+    background: url('../img/04.svg') repeat-x;
     animation: cloud 200s linear infinite, sea 5s ease-out infinite;
 }
 
 .picture-bg .sea03 {
     top: 285px;
     opacity: 0;
-    background: url('https://i.imgur.com/E3cmPpD.png') repeat-x;
+    /* background: url('https://i.imgur.com/E3cmPpD.png') repeat-x; */
+    background: url('../img/05.svg') repeat-x;
     animation: cloud 200s linear infinite, sea-opacity 5s linear infinite;
 }
 
@@ -238,7 +244,8 @@ section.picture-item#contact {
     left: 120px;
     width: 228px;
     height: 300px;
-    background: url('https://i.imgur.com/XvtAtGq.png') 0 0 no-repeat;
+    /* background: url('https://i.imgur.com/XvtAtGq.png') 0 0 no-repeat; */
+    background: url('../img/08.svg') 0 0 no-repeat;
     animation: walker 1s steps(2) infinite;
 }
 
